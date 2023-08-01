@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar"
 
-export default function Home() {
+export default function HomeDashboard() {
   return (
     <>
       <Navbar />
-      <h1>Gaming Time!</h1>
+      <h1>This is your logged in page</h1>
     </>
   )
 }
