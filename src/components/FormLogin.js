@@ -1,8 +1,7 @@
 "use client"
 import { useState } from "react";
 
-export default function FormLogin() {
-    const [username, setUsername] = useState('');
+export default function FormLogin({ setUsername }) {
     const [text, setText] = useState('');
 
     return (
@@ -12,7 +11,7 @@ export default function FormLogin() {
             <br />
             <button type="button" onClick={() => setUsername(text)} >Login</button>
 
-            <p>{username}</p>
+            {/* <p>{username}</p> */}
         </div>
     )
 }
