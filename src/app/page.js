@@ -1,20 +1,19 @@
-"use client"
 import FormLogin from "@/components/FormLogin"
 import Navbar from "@/components/Navbar"
-import { useState } from "react";
+import Link from "next/link"
 
 export default function Home() {
-  const [username, setUsername] = useState('');
-
   return (
     <>
-      <Navbar username={username} />
+      <Navbar />
       <div>
         <h3>Belajar Redux</h3>
         <p>Ini aplikasi sederhana</p>
+
+        <Link href={'/profile'}>Profile</Link>
       </div>
       <form>
-        <FormLogin setUsername={setUsername} />
+        <FormLogin />
       </form>
     </>
   )
