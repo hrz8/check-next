@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {fetchBlogs} from '../../service';
+import { fetchBlogs } from "@/redux/slicers/blog-slice";
 
 export default function ListBlogs() {
     const blogs = useSelector((state) => state.blog.value.posts);
@@ -12,7 +12,7 @@ export default function ListBlogs() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetchBlogs(dispatch);
+        dispatch(fetchBlogs());
     }, [dispatch]);
 
     return (
